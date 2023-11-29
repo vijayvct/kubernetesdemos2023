@@ -5,7 +5,7 @@ metadata:
 spec:
  type: LoadBalancer
  selector:
-    app: nginx-app
+    app: nginx-pod
  ports:
   - name: "http"
     port: 80 #Loadbalancer Port

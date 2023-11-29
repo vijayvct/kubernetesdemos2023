@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-pod-limit
+  labels:
+    name: nginx-pod-limit
+spec:
+  containers:
+  - name: nginx-pod-limit-container
+    image: nginx
+    resources:
+      limits:
+        memory: "256Mi"
+        cpu: "100m"
+    ports:
+      - containerPort: 80

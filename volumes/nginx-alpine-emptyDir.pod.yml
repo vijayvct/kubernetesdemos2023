@@ -10,13 +10,14 @@ spec:
       - name: html 
         mountPath: /usr/share/nginx/html
         readOnly: true 
-    resources:
+    resources: {}
+    
   - name: html-updater 
     image: alpine 
     command: ["/bin/sh", "-c"] 
     args: 
       - while true; do date >> /html/index.html;sleep 10; done 
-    resources:
+    resources: {}
     volumeMounts: 
       - name: html 
         mountPath: /html 

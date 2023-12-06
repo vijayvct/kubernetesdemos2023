@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: demo-configmap
+data:
+  #database details
+  database: mongodb
+  database_url: mongodb://localhost:27017
+
+  keys:
+   image.public.key= 771
+   rsa.public.ey= 42
